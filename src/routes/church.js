@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Crurch = require('../models/CrurchesModels')
+const Crurch = require('../models/ChurchesModels')
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {

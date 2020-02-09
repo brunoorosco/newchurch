@@ -1,5 +1,7 @@
-# newchurch
-# Comunidade Avivamento em Cristo
+Portal Comunidade Avivamento em Cristo
+
 - Backend aplicação node.js da comunidade
 - Express
 - Sequelize
+
+- frontend em react

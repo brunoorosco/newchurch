@@ -27,8 +27,9 @@ let Cem = db.sequelize.define('membros', {
       type: db.Sequelize.STRING
    },
    cadastro: {
-      type: db.Sequelize.TIME,
-    
+      type:  'TIMESTAMP',
+      defaultValue: db.Sequelize.literal('CURRENT_TIMESTAMP'),
+      allowNull: false
    },
    igreja: {
       type: db.Sequelize.STRING
