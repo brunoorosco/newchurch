@@ -5,3 +5,4 @@ Portal Comunidade Avivamento em Cristo
 - Sequelize
 
 - frontend em react
+    - Instalado o axios
