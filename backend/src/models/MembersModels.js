@@ -1,7 +1,7 @@
 const db = require('../config/dataBase')
 
-let Cem = db.sequelize.define('membros', {
-   id: {
+let Members = db.sequelize.define('membros', {
+   idmembros: {
       type: db.Sequelize.INTEGER,
       primaryKey: true,
    },
@@ -44,4 +44,4 @@ let Cem = db.sequelize.define('membros', {
 }
 );
 
-module.exports = Cem;
+module.exports = Members;

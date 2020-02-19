@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const app = express();
-const port = 3000;
+const port = 3005;
 
 const admin = require('./routes/admin')
 const users = require('./routes/members')
@@ -12,7 +13,7 @@ const encontro = require('./routes/encontro')
 const reencontro = require('./routes/reencontro')
 const course = require('./routes/course')
 
-
+app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
