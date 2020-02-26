@@ -4,6 +4,12 @@ let Members = db.sequelize.define('membros', {
    idmembros: {
       type: db.Sequelize.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
+      references: {
+
+         key: 'id',
+
+      }
    },
    nome: {
       type: db.Sequelize.INTEGER
@@ -12,6 +18,9 @@ let Members = db.sequelize.define('membros', {
       type: db.Sequelize.STRING
    },
    endereco: {
+      type: db.Sequelize.STRING
+   },
+   numero: {
       type: db.Sequelize.STRING
    },
    nasc: {
@@ -26,8 +35,8 @@ let Members = db.sequelize.define('membros', {
    cargo: {
       type: db.Sequelize.STRING
    },
-   cadastro: {
-      type:  'TIMESTAMP',
+   created_at: {
+      type: 'TIMESTAMP',
       defaultValue: db.Sequelize.literal('CURRENT_TIMESTAMP'),
       allowNull: false
    },
