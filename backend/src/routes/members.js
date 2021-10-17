@@ -4,26 +4,18 @@ const router = express.Router();
 const Users = require('../models/MembersModels')
 
 // define the home page route
-router.get('/', function (req, res, next) {
+router.get('/?id', function (req, res, next) {
   // find multiple entries
-  id = (req.params.id)
-  console.log(id)
-
-  Users.findAll().then(user => {
-    res.json({ user })
-  })
-
-});
+    Users.findAll().then(user => {
+      res.json({ user })
+    })
+  });
 
 router.get('/:id', (req, res) => {
-  // find multiple entries
-
-  // Users.findById(req.params.id).then(user => {
-  //   res.json({ user })
-  // })
-  
+ 
+  id = (req.params.id)
   Users.findOne({
-    where: { idmembros: '2' }
+    where: { idmembros: id }
   }).then(user => {
     res.json({ user })
   })

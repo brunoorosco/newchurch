@@ -20,9 +20,9 @@ let Members = db.sequelize.define('membros', {
    endereco: {
       type: db.Sequelize.STRING
    },
-   numero: {
-      type: db.Sequelize.STRING
-   },
+   // numero: {
+   //    type: db.Sequelize.STRING
+   // },
    nasc: {
       type: db.Sequelize.DATE
    },
@@ -35,7 +35,7 @@ let Members = db.sequelize.define('membros', {
    cargo: {
       type: db.Sequelize.STRING
    },
-   created_at: {
+   cadastro: {
       type: 'TIMESTAMP',
       defaultValue: db.Sequelize.literal('CURRENT_TIMESTAMP'),
       allowNull: false

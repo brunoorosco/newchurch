@@ -7,17 +7,24 @@ function App() {
   //estado, informação  que vamos armazenar no estado do componente 
   const [email, setEmail] = useState('');
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-
-   const response = await api.post('/admin',{ email })
-    console.log(response);
+  async function handleSubmit(e) {
+    e.preventDefault();
+        
+    try {
+       const response = await api.post('admin', {email})
+       console.log(response);
+    
+    } catch (error) {
+        alert(`Falha no login, tente novamente`)
+    }
+  
+  
   }
 
   return (
     <div className="container">
       <div className="content">
-        <form action="" onSubmit={handleSubmit}>
+        <form action="post" onSubmit={handleSubmit}>
           <label htmlFor="email" className="">E-mail</label>
           <input
             type="email"

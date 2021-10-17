@@ -13,9 +13,12 @@ const encontro = require('./routes/encontro')
 const reencontro = require('./routes/reencontro')
 const course = require('./routes/course')
 
-app.use(cors());
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
+
+app.use(cors())
+
+app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // ARQUIVO DE ROTAS
 app.use('/admin', admin)
@@ -26,6 +29,6 @@ app.use('/cursos', course)
 app.use('/encontros', encontro)
 app.use('/reencontros', reencontro)
 
-app.listen(port, () =>{
+app.listen(port, () => {
     console.log("Servidor Rodando")
 })
