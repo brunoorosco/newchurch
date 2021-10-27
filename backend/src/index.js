@@ -30,5 +30,5 @@ app.use('/encontros', encontro)
 app.use('/reencontros', reencontro)
 
 app.listen(port, () => {
-    console.log("Servidor Rodando")
+    console.log("Servidor Rodando na porta: 3005")
 })
